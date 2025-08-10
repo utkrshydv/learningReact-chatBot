@@ -3,7 +3,7 @@ import { Chatbot } from "supersimpledev";
 import dayjs from "dayjs";
 import './ChatInput.css'
 
-export function ChatInput({chatMessages, setChatMessages}){
+export function ChatInput({chatMessages, setChatMessages, clearMessages}){
   const [inputText, setInputText] = useState('');
 
   function saveInputText(event){
@@ -50,6 +50,12 @@ export function ChatInput({chatMessages, setChatMessages}){
     className='send-button'
     >
       Send
+    </button>
+    <button
+    onClick={clearMessages}
+    className='clear-button'
+    >
+     Clear
     </button>
     </div>
   )
