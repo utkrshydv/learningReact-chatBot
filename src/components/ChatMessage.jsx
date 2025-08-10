@@ -3,7 +3,8 @@ import UserImage from '../assets/user.png'
 import './ChatMessage.css'
 
 
-export function ChatMessage({message, sender}){
+export function ChatMessage({message, sender, time}){
+  console.log(time);
   return(
     <div className={
       sender === 'user'
@@ -18,6 +19,7 @@ export function ChatMessage({message, sender}){
       )}
       <div className="chat-message-text">
               {message}
+        <div className='chat-message-time'>{time}</div>
       </div>
       {sender === 'user' && (
         <img 
